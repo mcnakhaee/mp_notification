@@ -11,10 +11,10 @@ import os
 
 search_terms = [#'All', 'Fotocamera', 'Hasselblad', 'kowa', 'asahi', 'yashica', 'bronica', 'mamiya', 'pentax',
                 #'rolleiflex',
-                #'rolleicord', 'rollei', 'nikon', 'canon', 'zenith', 'takumar', 'topcon', 'primo',
+                #'rolleicord', 'rollei', 'nikon', 'canon', 'zenit', 'takumar', 'topcon', 'primo',
                 #'nikkormat', 'nicca', 'topcoflex', 'asahiflex', 'miranda', 'pancolar', 'autocord',
                 #'kalloflex', 'minolta', 'primoplan', 'exakta', 'krasnogorsk', 'edixa', 'kiev', 'jupiter', 'konica'
-    'minolta']
+    'takumar']
 # Replace with your token and chat ID
 # Read from environment variables
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
