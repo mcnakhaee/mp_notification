@@ -14,7 +14,7 @@ search_terms = [ 'Hasselblad', 'kowa', 'asahi', 'yashica', 'bronica', 'mamiya', 
                 'rolleicord', 'rollei', 'nikon', 'canon', 'zenit', 'takumar', 'topcon', 'primo',
                 'nikkormat', 'nicca', 'topcoflex', 'asahiflex', 'miranda', 'pancolar', 'autocord',
                 'kalloflex' , 'primoplan', 'exakta', 'krasnogorsk', 'edixa']
-search_terms = ['pentax', 'yashica', 'bronica']
+#search_terms = ['pentax', 'yashica', 'bronica']
 # Replace with your token and chat ID
 # Read from environment variables
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
