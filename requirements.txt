@@ -1,0 +1,7 @@
+streamlit
+requests
+pandas
+# Add any other dependencies
+httpx
+openai
+beautifulsoup4
