@@ -14,6 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # Ensure correct permissions for push
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -31,14 +33,13 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python send_to_telegram.py
 
-   # Add new files in data folder, commit along with other modified files, push
-      - name: Commit files
+      # Add new files in data folder, commit along with other modified files, push
+      - name: Commit and push changes
         run: |
-          git config --local user.name actions-user
-          git config --local user.email "actions@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -am "GH ACTION Headlines $(date)"
-          git push origin main
+          git commit -m "GH ACTION Headlines $(date)" || exit 0  # Prevent error if no changes
+          git push
         env:
-          REPO_KEY: ${{secrets.GITHUB_TOKEN}}
-          username: github-actions
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
