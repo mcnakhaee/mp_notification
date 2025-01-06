@@ -1,6 +1,9 @@
 name: CI
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 9-21 * * *' # Runs every hour between 9am and 9pm
   workflow_dispatch:
