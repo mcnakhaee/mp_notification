@@ -9,12 +9,12 @@ import time
 import random
 import os
 
-search_terms = [#'All', 'Fotocamera', 'Hasselblad', 'kowa', 'asahi', 'yashica', 'bronica', 'mamiya', 'pentax',
-                #'rolleiflex',
-                #'rolleicord', 'rollei', 'nikon', 'canon', 'zenit', 'takumar', 'topcon', 'primo',
-                #'nikkormat', 'nicca', 'topcoflex', 'asahiflex', 'miranda', 'pancolar', 'autocord',
-                #'kalloflex', 'minolta', 'primoplan', 'exakta', 'krasnogorsk', 'edixa', 'kiev', 'jupiter', 'konica'
-    'takumar']
+search_terms = [ 'Hasselblad', 'kowa', 'asahi', 'yashica', 'bronica', 'mamiya', 'pentax',
+                'rolleiflex',
+                'rolleicord', 'rollei', 'nikon', 'canon', 'zenit', 'takumar', 'topcon', 'primo',
+                'nikkormat', 'nicca', 'topcoflex', 'asahiflex', 'miranda', 'pancolar', 'autocord',
+                'kalloflex' , 'primoplan', 'exakta', 'krasnogorsk', 'edixa']
+search_terms = ['pentax']
 # Replace with your token and chat ID
 # Read from environment variables
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
