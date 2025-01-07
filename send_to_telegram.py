@@ -152,7 +152,10 @@ def search_and_send_to_telegram(search_terms, cat_1=31, cat_2=480):
     return df_items
 def main():
     search_and_send_to_telegram(search_terms=search_terms)
-    search_and_send_to_telegram(search_terms=search_terms_film, cat_1=31, cat_2=1115)
+    try:
+        search_and_send_to_telegram(search_terms=search_terms_film, cat_1=31, cat_2=1115)
+    except:
+        print('some error')
 
 # Streamlit app
 if __name__ == "__main__":
