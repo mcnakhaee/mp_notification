@@ -9,7 +9,7 @@ import time
 import random
 import os
 
-search_terms = [ 'Hasselblad', 'kowa', 'asahi', 'yashica', 'bronica', 'mamiya', 'pentax',
+search_terms = [ 'verzemling','lenzen','Hasselblad', 'kowa', 'asahi', 'yashica', 'bronica', 'mamiya', 'pentax',
                 'rolleiflex',
                 'rolleicord', 'rollei', 'nikon', 'canon', 'zenit', 'takumar', 'topcon', 'primo',
                 'nikkormat', 'nicca', 'topcoflex', 'asahiflex', 'miranda', 'pancolar', 'autocord',
@@ -17,6 +17,7 @@ search_terms = [ 'Hasselblad', 'kowa', 'asahi', 'yashica', 'bronica', 'mamiya', 
 #search_terms = ['pentax', 'yashica', 'bronica']
 # Replace with your token and chat ID
 # Read from environment variables
+search_terms_film = [['fuji','kodak','portra','kodak gold','a']]
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
@@ -151,6 +152,8 @@ def search_and_send_to_telegram(search_terms, cat_1=31, cat_2=480):
     return df_items
 def main():
     search_and_send_to_telegram(search_terms=search_terms)
+    search_and_send_to_telegram(search_terms=search_terms_film, cat_1=31, cat_2=1115)
+
 # Streamlit app
 if __name__ == "__main__":
     main()
